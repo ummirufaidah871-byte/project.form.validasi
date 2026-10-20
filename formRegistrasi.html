@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Registrasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="kartu">
+    <h1>Daftar akun anda</h1>
+    <p class="subjudul">Seluruh kolom wajib diisi!.</p>
+
+    <form id="formRegistrasi" novalidate>
+      <div class="kolom">
+        <label for="nama">Nama lengkap</label>
+        <input type="text" id="nama" placeholder="Budiono Siregar" autocomplete="name">
+        <p class="error" id="errorNama"></p>
+      </div>
+
+      <div class="kolom">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="nama@email.com" autocomplete="email">
+        <p class="error" id="errorEmail"></p>
+      </div>
+
+      <div class="kolom">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder=" Contoh: BudiAnakBaik12" autocomplete="username">
+        <p class="error" id="errorUsername"></p>
+      </div>
+
+      <div class="kolom">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Minimal 8 karakter" autocomplete="new-password">
+        <p class="error" id="errorPassword"></p>
+      </div>
+
+      <div class="kolom">
+        <label for="konfirmasi">Konfirmasi password</label>
+        <input type="password" id="konfirmasi" placeholder="Masukkan ulang password" autocomplete="new-password">
+        <p class="error" id="errorKonfirmasi"></p>
+      </div>
+
+      <button type="submit" id="tombolDaftar">Daftar</button>
+      <p class="sukses" id="pesanSukses"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

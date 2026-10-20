@@ -1,0 +1,96 @@
+:root {
+  --bg: #eef2f1;
+  --kartu: #ffffff;
+  --teks: #1f2d2b;
+  --redup: #5d6d6a;
+  --garis: #c5d1ce;
+  --aksen: #0f766e;
+  --error: #b42318;
+  --ok: #137333;
+  --ok-bg: #e3f5e8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg);
+  color: var(--teks);
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.kartu {
+  width: 100%;
+  max-width: 420px;
+  background: var(--kartu);
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 28px rgba(15, 60, 55, .12);
+}
+
+h1 { margin: 0 0 4px; font-size: 1.5rem; }
+
+.subjudul { margin: 0 0 20px; color: var(--redup); font-size: .95rem; }
+
+.kolom { margin-bottom: 14px; }
+
+label { display: block; margin-bottom: 6px; font-weight: 600; font-size: .9rem; }
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1.5px solid var(--garis);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+input:focus {
+  border-color: var(--aksen);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, .18);
+}
+
+input.invalid { border-color: var(--error); }
+
+/* Pesan error di bawah tiap kolom */
+.error {
+  margin: 5px 0 0;
+  color: var(--error);
+  font-size: .82rem;
+}
+.error:empty { display: none; }
+
+button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--aksen);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(1.08); }
+button:focus-visible { outline: 3px solid rgba(15, 118, 110, .4); outline-offset: 2px; }
+
+/* Pesan sukses berwarna hijau */
+.sukses {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: var(--ok);
+  background: var(--ok-bg);
+  font-weight: 600;
+  font-size: .92rem;
+}
+.sukses:empty { display: none; }
